@@ -1,10 +1,11 @@
 package oop_138599_RadityaWeek01.week01
 
 fun main() {
-    var name: String = "John Thor"
-    var score: Int = 80
+    //REFACTOR: Gunakan val dan hapus tipe data eksplisit
+    val name: String = "John Thor"
+    val score: Int = 80
 
-    // Concattenation gaya lama
-    println("Name " + name + " Nilai " + score)
+    // REFACTOR: String Template ($name)
+    println("Name : $name, Score : $score")
 
 }
