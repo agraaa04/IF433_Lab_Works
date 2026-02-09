@@ -3,13 +3,15 @@ package oop_138599_RadityaAgra.week01
 fun main() {
     val gameTitle = "Elden Ring"
     val price = 750_000
+    val userNote: String? = null
 
     val discount = calculateDiscount(price)
     val finalPrice = price - discount
 
     printReceipt(
         title = gameTitle,
-        finalPrice = finalPrice
+        finalPrice = finalPrice,
+        note = userNote
     )
 }
 
@@ -20,8 +22,9 @@ fun calculateDiscount(price: Int): Int =
         price * 10 / 100
     }
 
-fun printReceipt(title: String, finalPrice: Int) {
+fun printReceipt(title: String, finalPrice: Int, note: String?) {
     println("Judul Game : $title")
     println("Harga Akhir: Rp $finalPrice")
+    println("Catatan    : ${note ?: "Tidak ada catatan"}")
 }
 
