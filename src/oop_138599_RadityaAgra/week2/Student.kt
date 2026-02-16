@@ -2,7 +2,12 @@ package oop_138599_RadityaAgra.week2
 
 import java.util.Scanner
 
-class Student (val name:String,val nim:String, val major:String){
+class Student (
+    val name:String,
+    val nim:String,
+    var major:String,
+    var gpa:Double = 0.0
+){
     init{
         //Validasi sederhana: Cek panjang NIM
         if (nim.length != 5){
