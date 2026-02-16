@@ -39,4 +39,22 @@ fun main(){
     if (nim.length != 5) {
         println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter")
     }
+
+    println("Pilih Jalur Pendaftaran:")
+    println("1. Jalur Lengkap (Dengan Jurusan)")
+    println("2. Jalur Umum (Tanpa Jurusan)")
+
+    print("Masukkan pilihan (1/2): ")
+    val choice = scanner.nextInt()
+    scanner.nextLine()
+
+    val student = if (choice == 1) {
+        print("Masukkan Jurusan: ")
+        val major = scanner.nextLine()
+        Student(nim, name, major)
+    } else {
+        Student(nim, name)
+    }
+
+    println("Status: Pendaftaran Berhasil")
 }
