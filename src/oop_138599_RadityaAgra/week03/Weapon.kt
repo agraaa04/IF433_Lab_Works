@@ -19,3 +19,13 @@ class Weapon(val name:String, damage: Int){
             else -> "Common"
         }
 }
+
+fun main(){
+    val sword = Weapon("Excalibur", 100)
+
+    sword.damage = -50
+    sword.damage = 9999
+
+    println("Damage: ${sword.damage}")
+    println("Tier: ${sword.tier}")
+}
