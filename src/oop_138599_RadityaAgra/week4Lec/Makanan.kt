@@ -1,4 +1,4 @@
-package oop_138599_RadityaAgra.week4
+package oop_138599_RadityaAgra.week4Lec
 
 open class Makanan {
     private var namaResto:String = ""
