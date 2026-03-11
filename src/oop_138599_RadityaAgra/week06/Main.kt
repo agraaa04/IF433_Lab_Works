@@ -30,5 +30,9 @@ fun main() {
     hub.addDevice(speaker)
     hub.addDevice(cctv)
 
+    println("\n=== TESTING SMART HOME HUB ===")
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
+
 
 }
