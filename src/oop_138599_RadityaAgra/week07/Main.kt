@@ -21,7 +21,6 @@ fun main() {
     println(data1)
     println("Sama? ${data1 == data2}")
 
-    // Immutability & Destructuring
     val data3 = data1.copy(age = 23)
     println("Hasil Copy: $data3")
     val (userName, userAge) = data1
