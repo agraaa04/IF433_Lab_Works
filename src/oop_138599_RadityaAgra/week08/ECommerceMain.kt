@@ -9,4 +9,22 @@ fun main() {
     mapOf("name" to "Ghost Item", "type" to "CLOTHING"),
     mapOf("id" to "X01", "name" to "Unknown", "type" to "FOOD")
     )
+
+    val parser = ApiParser()
+
+    println("=== PROCESSING E-COMMERCE BATCH ===")
+    for (raw in rawApiData) {
+        try {
+            val product = parser.parseProduct(raw)
+
+            // Gunakan ?.let untuk memanggil checkout jika tidak null
+            product?.let {
+                println("Processing ${it.javaClass.simpleName}: ${raw["name"]}")
+                parser.checkout(it)
+            }
+        } catch (e: IllegalArgumentException) {
+            // Tangkap data korup (seperti Ghost Item)
+            println("LOG: Skipping corrupt data - ${e.message}")
+        }
+    }
 }
