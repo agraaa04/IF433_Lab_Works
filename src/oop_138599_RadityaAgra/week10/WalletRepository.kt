@@ -11,7 +11,6 @@ class WalletRepository<T : Any> {
         return items
     }
 
-    // Logic pencarian sederhana (Constraint <T: Any>)
     fun search(predicate: (T) -> Boolean): List<T> {
         return items.filter(predicate)
     }
