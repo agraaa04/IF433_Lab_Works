@@ -23,4 +23,15 @@ fun main() {
     txRepo.getAll().forEach { tx ->
         println("ID: ${tx.id}, Amount: ${tx.amount}")
     }
+
+    //hasil run
+    //=== CRYPTO DASHBOARD ===
+    //Status: 200 OK
+    //Coin: BTC, Balance: 0.5
+    //Coin: ETH, Balance: 2.0
+    //Coin: USDT, Balance: 1000.0
+    //
+    //=== TRANSACTION LOG ===
+    //ID: TX001, Amount: 0.1
+    //ID: TX002, Amount: 50.0
 }
