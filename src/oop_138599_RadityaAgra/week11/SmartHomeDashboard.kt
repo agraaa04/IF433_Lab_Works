@@ -28,4 +28,8 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    with(homeDevices) {
+        println("Rangkuman Dashboard: Terdeteksi ${this.size} perangkat.")
+    }
 }
