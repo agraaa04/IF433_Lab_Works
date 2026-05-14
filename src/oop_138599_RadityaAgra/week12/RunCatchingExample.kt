@@ -5,5 +5,15 @@ fun main() {
         "123a".toInt()
     }
 
-    println(result)
+    val value = result.getOrElse {
+        -1
+    }
+
+    println(value)
+
+    val recovered = result.recover {
+        0
+    }
+
+    println(recovered.getOrNull())
 }
