@@ -12,3 +12,15 @@ class BankAccount(var balance: Int) {
         println("Penarikan berhasil. Sisa saldo: $balance")
     }
 }
+
+fun main() {
+    val account = BankAccount(100)
+
+    try {
+        account.withdraw(200)
+    } catch (e: InsufficientFundsException) {
+        println("Custom Error: ${e.message}")
+    } catch (e: Exception) {
+        println("General Error: ${e.message}")
+    }
+}
