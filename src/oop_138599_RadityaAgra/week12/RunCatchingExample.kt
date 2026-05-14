@@ -16,4 +16,14 @@ fun main() {
     }
 
     println(recovered.getOrNull())
+
+    runCatching {
+        "123a".toInt()
+    }
+        .onSuccess {
+            println("Berhasil: $it")
+        }
+        .onFailure {
+            println("Gagal: ${it.message}")
+        }
 }
